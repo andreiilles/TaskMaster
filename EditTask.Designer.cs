@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(EditTask));
             EditTaskDetailsBox = new GroupBox();
             label3 = new Label();
             EditTaskDeadlineDatePicker = new DateTimePicker();
@@ -49,9 +50,11 @@
             EditTaskDetailsBox.Controls.Add(label2);
             EditTaskDetailsBox.Controls.Add(EditTaskDescriptionTextbox);
             EditTaskDetailsBox.Controls.Add(label1);
-            EditTaskDetailsBox.Location = new Point(12, 12);
+            EditTaskDetailsBox.Location = new Point(21, 24);
+            EditTaskDetailsBox.Margin = new Padding(5, 6, 5, 6);
             EditTaskDetailsBox.Name = "EditTaskDetailsBox";
-            EditTaskDetailsBox.Size = new Size(558, 180);
+            EditTaskDetailsBox.Padding = new Padding(5, 6, 5, 6);
+            EditTaskDetailsBox.Size = new Size(957, 360);
             EditTaskDetailsBox.TabIndex = 1;
             EditTaskDetailsBox.TabStop = false;
             EditTaskDetailsBox.Text = "Edit task details";
@@ -59,62 +62,69 @@
             // label3
             // 
             label3.AutoSize = true;
-            label3.Location = new Point(44, 112);
+            label3.Location = new Point(75, 224);
+            label3.Margin = new Padding(5, 0, 5, 0);
             label3.Name = "label3";
-            label3.Size = new Size(56, 15);
+            label3.Size = new Size(100, 30);
             label3.TabIndex = 0;
             label3.Text = "Deadline:";
             // 
             // EditTaskDeadlineDatePicker
             // 
-            EditTaskDeadlineDatePicker.Location = new Point(104, 106);
+            EditTaskDeadlineDatePicker.Location = new Point(178, 212);
+            EditTaskDeadlineDatePicker.Margin = new Padding(5, 6, 5, 6);
             EditTaskDeadlineDatePicker.Name = "EditTaskDeadlineDatePicker";
-            EditTaskDeadlineDatePicker.Size = new Size(200, 23);
+            EditTaskDeadlineDatePicker.Size = new Size(340, 35);
             EditTaskDeadlineDatePicker.TabIndex = 4;
             EditTaskDeadlineDatePicker.Value = new DateTime(2023, 11, 27, 0, 0, 0, 0);
             // 
             // EditTaskPriorityPicker
             // 
-            EditTaskPriorityPicker.Location = new Point(104, 77);
+            EditTaskPriorityPicker.Location = new Point(178, 154);
+            EditTaskPriorityPicker.Margin = new Padding(5, 6, 5, 6);
             EditTaskPriorityPicker.Maximum = new decimal(new int[] { 5, 0, 0, 0 });
             EditTaskPriorityPicker.Minimum = new decimal(new int[] { 1, 0, 0, 0 });
             EditTaskPriorityPicker.Name = "EditTaskPriorityPicker";
-            EditTaskPriorityPicker.Size = new Size(58, 23);
+            EditTaskPriorityPicker.Size = new Size(99, 35);
             EditTaskPriorityPicker.TabIndex = 3;
             EditTaskPriorityPicker.Value = new decimal(new int[] { 1, 0, 0, 0 });
             // 
             // label2
             // 
             label2.AutoSize = true;
-            label2.Location = new Point(25, 79);
+            label2.Location = new Point(43, 158);
+            label2.Margin = new Padding(5, 0, 5, 0);
             label2.Name = "label2";
-            label2.Size = new Size(73, 15);
+            label2.Size = new Size(128, 30);
             label2.TabIndex = 0;
             label2.Text = "Task priority:";
             // 
             // EditTaskDescriptionTextbox
             // 
-            EditTaskDescriptionTextbox.Location = new Point(104, 22);
+            EditTaskDescriptionTextbox.Location = new Point(178, 44);
+            EditTaskDescriptionTextbox.Margin = new Padding(5, 6, 5, 6);
             EditTaskDescriptionTextbox.Multiline = true;
             EditTaskDescriptionTextbox.Name = "EditTaskDescriptionTextbox";
-            EditTaskDescriptionTextbox.Size = new Size(448, 49);
+            EditTaskDescriptionTextbox.Size = new Size(765, 94);
             EditTaskDescriptionTextbox.TabIndex = 2;
             // 
             // label1
             // 
             label1.AutoSize = true;
-            label1.Location = new Point(6, 25);
+            label1.Location = new Point(10, 50);
+            label1.Margin = new Padding(5, 0, 5, 0);
             label1.Name = "label1";
-            label1.Size = new Size(94, 15);
+            label1.Size = new Size(165, 30);
             label1.TabIndex = 0;
             label1.Text = "Task description:";
             // 
             // EditConfirmTaskButton
             // 
             EditConfirmTaskButton.DialogResult = DialogResult.OK;
-            EditConfirmTaskButton.Location = new Point(116, 198);
+            EditConfirmTaskButton.Location = new Point(199, 396);
+            EditConfirmTaskButton.Margin = new Padding(5, 6, 5, 6);
             EditConfirmTaskButton.Name = "EditConfirmTaskButton";
-            EditConfirmTaskButton.Size = new Size(132, 46);
+            EditConfirmTaskButton.Size = new Size(226, 92);
             EditConfirmTaskButton.TabIndex = 6;
             EditConfirmTaskButton.Text = "Confirm";
             EditConfirmTaskButton.UseVisualStyleBackColor = true;
@@ -123,21 +133,24 @@
             // EditCancelTaskButton
             // 
             EditCancelTaskButton.DialogResult = DialogResult.Cancel;
-            EditCancelTaskButton.Location = new Point(254, 198);
+            EditCancelTaskButton.Location = new Point(435, 396);
+            EditCancelTaskButton.Margin = new Padding(5, 6, 5, 6);
             EditCancelTaskButton.Name = "EditCancelTaskButton";
-            EditCancelTaskButton.Size = new Size(132, 46);
+            EditCancelTaskButton.Size = new Size(226, 92);
             EditCancelTaskButton.TabIndex = 7;
             EditCancelTaskButton.Text = "Cancel";
             EditCancelTaskButton.UseVisualStyleBackColor = true;
             // 
             // EditTask
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleDimensions = new SizeF(12F, 30F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(586, 269);
+            ClientSize = new Size(1005, 538);
             Controls.Add(EditCancelTaskButton);
             Controls.Add(EditConfirmTaskButton);
             Controls.Add(EditTaskDetailsBox);
+            Icon = (Icon)resources.GetObject("$this.Icon");
+            Margin = new Padding(5, 6, 5, 6);
             Name = "EditTask";
             SizeGripStyle = SizeGripStyle.Hide;
             StartPosition = FormStartPosition.CenterScreen;

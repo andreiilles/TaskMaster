@@ -1,14 +1,14 @@
 ﻿namespace TaskMaster
 {
-    partial class Login
+    partial class Register
     {
         /// <summary>
-        ///  Required designer variable.
+        /// Required designer variable.
         /// </summary>
         private System.ComponentModel.IContainer components = null;
 
         /// <summary>
-        ///  Clean up any resources being used.
+        /// Clean up any resources being used.
         /// </summary>
         /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
         protected override void Dispose(bool disposing)
@@ -23,36 +23,36 @@
         #region Windows Form Designer generated code
 
         /// <summary>
-        ///  Required method for Designer support - do not modify
-        ///  the contents of this method with the code editor.
+        /// Required method for Designer support - do not modify
+        /// the contents of this method with the code editor.
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Login));
-            loginGroup = new GroupBox();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Register));
+            registerGroup = new GroupBox();
             label2 = new Label();
             label1 = new Label();
             passwordBox = new TextBox();
             usernameBox = new TextBox();
-            loginButton = new Button();
-            loginGroup.SuspendLayout();
+            registerButton = new Button();
+            registerGroup.SuspendLayout();
             SuspendLayout();
             // 
-            // loginGroup
+            // registerGroup
             // 
-            loginGroup.Controls.Add(label2);
-            loginGroup.Controls.Add(label1);
-            loginGroup.Controls.Add(passwordBox);
-            loginGroup.Controls.Add(usernameBox);
-            loginGroup.Controls.Add(loginButton);
-            loginGroup.Location = new Point(182, 160);
-            loginGroup.Margin = new Padding(5, 6, 5, 6);
-            loginGroup.Name = "loginGroup";
-            loginGroup.Padding = new Padding(5, 6, 5, 6);
-            loginGroup.Size = new Size(615, 374);
-            loginGroup.TabIndex = 0;
-            loginGroup.TabStop = false;
-            loginGroup.Text = "Welcome";
+            registerGroup.Controls.Add(label2);
+            registerGroup.Controls.Add(label1);
+            registerGroup.Controls.Add(passwordBox);
+            registerGroup.Controls.Add(usernameBox);
+            registerGroup.Controls.Add(registerButton);
+            registerGroup.Location = new Point(163, 132);
+            registerGroup.Margin = new Padding(5, 6, 5, 6);
+            registerGroup.Name = "registerGroup";
+            registerGroup.Padding = new Padding(5, 6, 5, 6);
+            registerGroup.Size = new Size(660, 452);
+            registerGroup.TabIndex = 1;
+            registerGroup.TabStop = false;
+            registerGroup.Text = "Welcome";
             // 
             // label2
             // 
@@ -91,44 +91,40 @@
             usernameBox.Size = new Size(301, 35);
             usernameBox.TabIndex = 1;
             // 
-            // loginButton
+            // registerButton
             // 
-            loginButton.Location = new Point(249, 240);
-            loginButton.Margin = new Padding(5, 6, 5, 6);
-            loginButton.Name = "loginButton";
-            loginButton.Size = new Size(171, 46);
-            loginButton.TabIndex = 0;
-            loginButton.Text = "Login";
-            loginButton.UseVisualStyleBackColor = true;
-            loginButton.Click += loginButton_Click;
+            registerButton.Location = new Point(247, 300);
+            registerButton.Margin = new Padding(5, 6, 5, 6);
+            registerButton.Name = "registerButton";
+            registerButton.Size = new Size(171, 46);
+            registerButton.TabIndex = 0;
+            registerButton.Text = "Register";
+            registerButton.UseVisualStyleBackColor = true;
             // 
-            // Login
+            // Register
             // 
-            AcceptButton = loginButton;
             AutoScaleDimensions = new SizeF(12F, 30F);
             AutoScaleMode = AutoScaleMode.Font;
-            AutoSize = true;
-            ClientSize = new Size(1023, 738);
-            Controls.Add(loginGroup);
-            FormBorderStyle = FormBorderStyle.FixedSingle;
+            ClientSize = new Size(1010, 676);
+            Controls.Add(registerGroup);
             Icon = (Icon)resources.GetObject("$this.Icon");
             Margin = new Padding(5, 6, 5, 6);
-            Name = "Login";
+            Name = "Register";
             SizeGripStyle = SizeGripStyle.Hide;
-            StartPosition = FormStartPosition.CenterScreen;
-            Text = "Login || TaskMaster";
-            loginGroup.ResumeLayout(false);
-            loginGroup.PerformLayout();
+            StartPosition = FormStartPosition.CenterParent;
+            Text = "Register || TaskMaster";
+            registerGroup.ResumeLayout(false);
+            registerGroup.PerformLayout();
             ResumeLayout(false);
         }
 
         #endregion
 
-        private GroupBox loginGroup;
+        private GroupBox registerGroup;
+        private Label label2;
         private Label label1;
         private TextBox passwordBox;
         private TextBox usernameBox;
-        private Button loginButton;
-        private Label label2;
+        private Button registerButton;
     }
 }

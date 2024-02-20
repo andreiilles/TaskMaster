@@ -153,7 +153,7 @@ namespace TaskMaster
             }
             foreach (DataGridViewRow row in taskDataGridView.Rows)
             {
-                if (row.Cells["Overdue"].Value.ToString() == "True")
+                if (row.Cells["Overdue"].Value.ToString() == "True" && row.Cells["Completed"].Value.ToString() != "True")
                 {
                     row.DefaultCellStyle.BackColor = Color.Red;
                 }
@@ -376,19 +376,20 @@ namespace TaskMaster
             taskDataGridView.Refresh();
             ConfigureDataGridViewColumns();
         }
-        private void GetTaskStatistics()
-        {
-            TotalTaskCount = tasks.Count;
-            CompletedTaskCount = tasks.Count(task => task.Completed == true);
-            OverdueTaskCount = tasks.Count(task => task.Overdue == true);
-            CompletedOverdueTaskCount = tasks.Count(task => task.Completed == true && task.Overdue == true);
-            CompletedOnTimeTaskCount = tasks.Count(task => task.Completed == true && task.Overdue == false);
-            IncompleteOverdueTaskCount = tasks.Count(task => task.Completed == false && task.Overdue == true);
-            TasksDueTodayCount = tasks.Count(task => task.Deadline.Date == DateTime.Now.Date);
-            TasksDueTomorrowCount = tasks.Count(task => task.Deadline.Date == DateTime.Now.Date.AddDays(1));
-            TasksDueThisWeekCount = tasks.Count(task => task.Deadline.Date >= DateTime.Now.Date && task.Deadline.Date <= DateTime.Now.Date.AddDays(7));
-            TasksDueThisMonthCount = tasks.Count(task => task.Deadline.Date.Month == DateTime.Now.Date.Month);
-        }
+        //De implementat
+        /* private void GetTaskStatistics()
+       {
+           TotalTaskCount = tasks.Count;
+           CompletedTaskCount = tasks.Count(task => task.Completed == true);
+           OverdueTaskCount = tasks.Count(task => task.Overdue == true);
+           CompletedOverdueTaskCount = tasks.Count(task => task.Completed == true && task.Overdue == true);
+           CompletedOnTimeTaskCount = tasks.Count(task => task.Completed == true && task.Overdue == false);
+           IncompleteOverdueTaskCount = tasks.Count(task => task.Completed == false && task.Overdue == true);
+           TasksDueTodayCount = tasks.Count(task => task.Deadline.Date == DateTime.Now.Date);
+           TasksDueTomorrowCount = tasks.Count(task => task.Deadline.Date == DateTime.Now.Date.AddDays(1));
+           TasksDueThisWeekCount = tasks.Count(task => task.Deadline.Date >= DateTime.Now.Date && task.Deadline.Date <= DateTime.Now.Date.AddDays(7));
+           TasksDueThisMonthCount = tasks.Count(task => task.Deadline.Date.Month == DateTime.Now.Date.Month);
+       }*/
         private void ExportTasksToCSVToolStripMenuItem_Click(object sender, EventArgs e)
         {
             ExportToCSVFileDialog.Filter = "CSV files (*.csv)|*.csv";

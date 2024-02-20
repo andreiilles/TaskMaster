@@ -4,7 +4,7 @@ namespace TaskMaster
 {
     internal class LoadTasks
     {
-        private string ConnectionString = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source=E:\\OneDrive\\OneDrive - e-uvt.ro\\Proiect Individual\\TaskMaster\\bin\\Debug\\net6.0-windows\\taskMasterMain.accdb";
+        private string ConnectionString = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\\Users\\andre\\OneDrive - e-uvt.ro\\Proiect Individual\\TaskMaster\\bin\\Debug\\net6.0-windows\\taskMasterMain.accdb";
         public List<Task> GetTasksForCurrentUser(string currentUser)
         {
             List<Task> tasks = new List<Task>();

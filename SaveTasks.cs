@@ -9,6 +9,7 @@ namespace TaskMaster
         private string ConnectionString = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source=E:\\OneDrive\\OneDrive - e-uvt.ro\\Proiect Individual\\TaskMaster\\bin\\Debug\\net6.0-windows\\taskMasterMain.accdb";
         public void SaveTaskList(List<Task> tasks)
         {
+
             using (OleDbConnection connection = new OleDbConnection(ConnectionString))
             {
                 connection.Open();
