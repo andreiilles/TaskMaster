@@ -1,4 +1,4 @@
-# TaskMaster - BETA
+# TaskMaster
 •	Aplicație software care permite gestionarea eficientă a task-urilor
 personale/profesionale, permițând urmărirea, filtrarea și organizarea, precum și completarea lor<br>
 •	Funcționalități propuse:<br>
